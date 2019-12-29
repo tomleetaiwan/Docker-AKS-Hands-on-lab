@@ -1,0 +1,33 @@
+version: '3.1'
+
+services:
+  
+  mysql:
+    image: mysql:8
+    # MySQL 8 預設 caching_sha2_password 與 WordPress 5.3.2 不相容，先改用原生密碼模式，並設定支援 UTF8 編碼
+    command: --default-authentication-plugin=mysql_native_password --character-set-server=utf8mb4 --collation-server=utf8mb4_unicode_ci
+    volumes:
+      - db_data:/var/lib/mysql
+    restart: always
+    environment:
+      MYSQL_ROOT_PASSWORD: wordpress
+      MYSQL_DATABASE: wordpress
+      MYSQL_USER: wordpress
+      MYSQL_PASSWORD: wordpress
+
+  wordpress:
+    depends_on:
+      - mysql
+    image: wordpress:5.3
+    # Wordpress 在本機 8765 Port 提供存取
+    ports:
+      - "8765:80"
+    restart: always
+    environment:
+       WORDPRESS_DB_HOST: mysql:3306
+       WORDPRESS_DB_USER: wordpress
+       WORDPRESS_DB_PASSWORD: wordpress
+       WORDPRESS_DB_NAME: wordpress
+
+volumes:
+  db_data: {}

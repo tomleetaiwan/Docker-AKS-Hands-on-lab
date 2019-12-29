@@ -1,0 +1,58 @@
+apiVersion: apps/v1
+# 定義物件 Deployment
+kind: Deployment
+metadata:
+  # Deploy 名稱
+  name: nodejs-app
+spec:
+  # 此 Deploy 確保維持 Pod 的數量
+  replicas: 1
+  selector:
+    # 只有具備 app: nodejs-app 標籤之樣板內所定義的 Pod 才會被部署
+    matchLabels:      
+      app: nodejs-app
+  template:
+    metadata:
+      # 定義樣板標籤
+      labels:
+        app: nodejs-app
+    spec:
+      containers:
+      # Pod 名稱  
+      - name: nodejs-app
+        # 請填入您的 ACR 名稱
+        image: <ACR 名稱>.azurecr.io/nodejs-app:1.0
+        # 每次部署都重新取得映像檔
+        imagePullPolicy: Always
+        # 需要之運算資源
+        resources:
+          # 請求配置之運算資源
+          requests:
+            cpu: 100m
+            memory: 128Mi
+          # 限制最大可用之運算資源，可以避免節點資源用盡  
+          limits:
+            cpu: 250m
+            memory: 256Mi
+        # 接收請求的 Port 為 9876    
+        ports:
+        - containerPort: 9876
+          name: nodejs-app
+---
+apiVersion: v1
+# 定義物件 Service
+kind: Service
+metadata:
+  # Service 名稱
+  name: nodejs-app-svc
+spec:
+  # 以負載平衡型態對外服務
+  type: LoadBalancer
+  ports:
+  # Service 對外開放存取之 Port 為 80，Pod 對外開放存取的 Port 為 9876
+  - name: http
+    targetPort: 9876
+    port: 80
+  selector:
+    # 將相關連線只送入有 app: nodejs-app 標籤之 Pod
+    app: nodejs-app
