@@ -227,7 +227,7 @@ kubectl get svc
 | wordpress-svc  | LoadBalancer | 10.0.5.1    | 20.43.162.112|80:30135/TCP  | 3m  |
 
 
-以瀏覽器連接依據配發的外部 IP Address 即可 Wordpress 首次執行安裝畫面
+以瀏覽器連線 wordpress-svc 的外部 IP Address 即可看到 Wordpress 首次執行安裝畫面
 
 ![Wordpress 首次執行安裝畫面](images/wordpress2.png)
 

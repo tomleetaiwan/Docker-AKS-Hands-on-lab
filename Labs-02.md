@@ -14,7 +14,7 @@ mkdir $HOME/docker/mysql;
 mkdir $HOME/docker/mysql-conf
 ```
 
-4.在命令列模式下執行以下命令，建立 MySQL 8 容器
+4.在 PowerShell 命令列模式下執行以下命令，建立 MySQL 8 容器
 ```powershell
 docker run `
 -d `
@@ -67,10 +67,10 @@ docker stop <CONTAINER ID>
 ```powershell
 docker ps
 ```
+
 | CONTAINER ID | IMAGE   | COMMAND                | CREATED       | STATUS | PORTS                              | NAMES          |
 |--------------|---------|------------------------|---------------|--------|------------------------------------|----------------|
 | | | | | | | 
-
 
 
 10.而此 MySQL 容器仍然存在，只是沒有被執行，下執行以下命令將可看到已經成功建立的所有容器
