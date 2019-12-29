@@ -2,7 +2,7 @@
 
 此實機操作練習是以 Windows 10 用戶運用 Linux 容器之情境所設計，並以 Microsoft Azure 相關容器服務作為練習的平台。請注意此系列操作練習目的在於建立容器應用基礎概念，相關組態配置並非考量真實營運環境的最佳架構。
 
-在練習過程中使用 Azure Virtual Machines B2S 規格 VM 作為 Azure Kuberntes Service 節點，每一個節點每小時產生 NT$1.3 費用，實機操作練習完畢後只須將相關節點關機，就不再產生費用。 Azure Kubernetes Service 叢集是免費服務，Azure Container Regisrty 基本版則是每月產生約 NT$155 費用，Azure Kubernetes Service 用到的 Persistent Volume Claim 的 Azure Managed Disk 費用為每月每 GB NT$1.5。假若練習兩小時完畢後刪除所有內容，產生費用約 NT$15。
+在練習過程中使用 Azure Virtual Machines B2S 規格 VM 作為 Azure Kuberntes Service 節點，每一個節點每小時產生 NT$1.3 費用，實機操作練習完畢後只須將相關節點關機，就不再產生費用，而每個節點 Azure Managed Disk 費用每月 NT$158。 Azure Kubernetes Service 叢集是免費服務，Azure Container Regisrty 基本版則是每月產生約 NT$155 費用，Azure Kubernetes Service 用到的 Persistent Volume Claim 的 Azure Managed Disk 費用為每月每 GB NT$1.5。假若練習兩小時完畢後刪除所有內容，產生費用約 NT$15。
 
 ## Docker 與 Microsoft Windows 相關資源
 * [Docker - 從入門到實踐正體中文版](https://philipzheng.gitbooks.io/docker_practice/content/)
