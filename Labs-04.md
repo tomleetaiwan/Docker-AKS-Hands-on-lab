@@ -72,6 +72,7 @@ docker images
 ```
 
 應會顯示類似如下結果 :
+
 | REPOSITORY  | TAG    | IMAGE ID     | CREATED       | SIZE   |
 |-------------|--------|--------------|---------------|--------|
 | nodejs-app | 1.0 | 148ab6e0b173 | 14 seconds ago | 913MB |

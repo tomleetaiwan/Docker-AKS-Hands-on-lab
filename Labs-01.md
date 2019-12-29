@@ -16,6 +16,7 @@ docker images
 
 ```
 應會顯示類似如下結果 :
+
 | REPOSITORY  | TAG    | IMAGE ID     | CREATED       | SIZE   |
 |-------------|--------|--------------|---------------|--------|
 | hello-world | latest | fce289e99eb9 | 12 months ago | 1.84kB |
