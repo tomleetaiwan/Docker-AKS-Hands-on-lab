@@ -56,6 +56,7 @@ dir $HOME/docker/mysql
 ```
 
 7.安裝 [Visual Studio Code](https://github.com/cweijan/vscode-mysql) 之 MySQL 延伸套件，或 [MySQL Workbench](https://dev.mysql.com/downloads/workbench/)，以 root 帳號與之前設定之密碼連線到 localhost 的 Port 3306 驗證資料庫已經順利運行
+
 ![MySQL Workbench 連線測試](images/mysqlworkbench.png)
 
 8.在命令列模式下執行以下命令，停止執行容器
