@@ -22,7 +22,7 @@ az login
 az group create -n myResourceGroup -l southeastasia
 ```
 
-4.已至少五個小寫英文或數字組成的 <ACR 名稱>，如下命令即可建立一個私有的標準版 Azure Container Registry (ACR)，**<ACR 名稱>.azurecr.io** 這個名稱將代表您的伺服器，因此必須絕對唯一，如果已經有其他微軟用戶選擇了相同名稱則無法順利建立，請更換一個新的名稱重新嘗試建立，建立成功後請紀錄此 <ACR 名稱>，並可至 [Azure Portal](https://portal.azure.com) 確認已經順利建立成功。
+4.已至少五個小寫英文或數字組成的 <ACR 名稱>，如下命令即可建立一個私有的標準版 Azure Container Registry (ACR)，**<ACR 名稱>.azurecr.io** 這個名稱將代表您的伺服器，因此必須絕對唯一，如果已經有其他微軟用戶選擇了相同名稱則無法順利建立，請更換一個新的名稱重新嘗試建立，建立成功後請紀錄此 <ACR 名稱>，並可至 [Azure Portal](https://portal.azure.com) 內尋找 myResourceGroup 確認已經順利建立成功。
 
 ```powershell
 az acr create -g myResourceGroup -n <ACR 名稱> --sku Basic
