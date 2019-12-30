@@ -110,7 +110,7 @@ kubectl get svc
 
 ![以瀏覽器瀏覽 IP Address 驗證結果](./images/browser3.png)
 
-如果我們進入 [Azure Portal](https://portal.azure.com) 找到放置 Azure Kubernetes Service 相關節點之資源群組，可以發現因 "nodejs-app-svc" 所建立的 Azure Load Balancer 與 Public IP Address。
+如果我們進入 [Azure Portal](https://portal.azure.com) 找到放置 Azure Kubernetes Service 相關節點之資源群組 MC_myResourceGroup_myAKS_southeastasia，可以發現因 "nodejs-app-svc" 所建立的 Azure Load Balancer 與 Public IP Address。
 
 ![在 Azure Portal 驗證結果](./images/resourcegroup.png)
 
