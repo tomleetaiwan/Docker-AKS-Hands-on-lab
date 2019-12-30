@@ -121,6 +121,7 @@ kubectl apply -f mysql.yaml
 kubectl port-forward <Pod 名稱> 3306:3306
 ```
 成功後即可利用 Lab 2 時所使用的 MySQL 資料庫管理工具對本機 3306 Port 進行連線測試。此時畫面應類似下圖
+
 ![MySQL Pod Port Forwarding ](./images/forward.png)
 
 當測試完畢無誤之後，鍵入 Ctrl-C 即可中斷 kubectl port-forward 執行。
