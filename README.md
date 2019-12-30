@@ -24,8 +24,10 @@
 * BIOS 與 Windows 需啟用 Hyper-V 虛擬化環境
 * 至 Docker Hub [註冊帳號並且下載](https://hub.docker.com/editions/community/docker-ce-desktop-windows) Docker Desktop for Windows(stable) 版本
 * 執行安裝程式，安裝完畢後 Windows 工作列會顯示 Docker 圖示點選可進行相關設定
+
 ![Windows 工作列圖示](images/taskbar.png)
 * 本實作練習採用 Linux 容器，啟用 Hyper-V 管理員可以看到 Docker Desktop for Windows 所建立的 Linux 虛擬機器
+
 ![Hyper-V 管理員](images/hypervmanager.png)
 
 ## 其他所需工具
