@@ -40,7 +40,7 @@ az acr login -n <ACR 名稱>
 docker tag nodejs-app:1.0 <ACR 名稱>.azurecr.io/nodejs-app:1.0
 ```
 
-3.在命令列模式下，如下鍵入指令確認標籤有順利貼上，由於是相同的映像檔 IMAGE ID 是相同的，僅有標籤不同
+3.在命令列模式下，如下鍵入指令確認標籤有順利貼上，由於是相同的映像檔 IMAGE ID 是相同的，僅有 REPOSITORY 名稱不同
 ```powershell
 docker images
 ```
