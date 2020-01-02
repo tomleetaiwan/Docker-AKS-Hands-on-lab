@@ -35,7 +35,7 @@ mysql:8 `
 * -p 建立 <本機開啟 Port>:<容器內對應之 Port>
 * mysql:8 所使用的映像檔
 * --character-set-server=utf8mb4 設定 MySQL 參數以支援 UTF8
-* --collation-server=utf8mb4_unicode_ci 設定 MySQL 參數以支援 UTF8
+* --collation-server=utf8mb4_unicode_ci 設定 MySQL 參數以支援 UTF8 定序
 * --default-authentication-plugin=mysql_native_password MySQL 8 預設 caching_sha2_password 與 WordPress 5.3.2 等許多既有軟體不相容，設定使用原生密碼模式以增加相容性
 
 5.在命令列模式下執行以下命令，確認目前 MySQL 容器有成功建立並執行，並記錄代表此容器之 CONTAINER ID
