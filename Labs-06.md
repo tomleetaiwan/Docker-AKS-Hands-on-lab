@@ -32,6 +32,12 @@ az aks install-cli
 az aks get-credentials -g myResourceGroup -n myAKS
 ```
 
+如果您的電腦中已經有使用其他的 Kubernetes 叢集，可以鍵入以下指令切換到此一新建立的 Kubernetes 叢集，如果沒有其他的叢集可以忽略此步驟
+
+```powershell
+kubectl config use-context myAKS
+```
+
 5.在命令列模式下達以下指令，列出所建立的 Auzre Kubernetes Service (AKS) 叢集內所有節點，確認環境已經正常運作
 ```powershell 
 kubectl get node
