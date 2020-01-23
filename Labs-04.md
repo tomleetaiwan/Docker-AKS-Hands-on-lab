@@ -87,7 +87,7 @@ docker history <IMAGE ID>
 ```powershell
 docker run -d -p 9999:9876 nodejs-app:1.0 
 ```
-11.開啟瀏覽器連線至此容器 http://localhost:9999 測試此 Nodejs 網頁應用程式，預期如下圖般順利執行回傳 Hello Wolrd 字樣網頁，如果鍵入以下指令
+11.開啟瀏覽器連線至此容器 http://localhost:9999 測試此 Nodejs 網頁應用程式，預期如下圖般順利執行回傳 Hello World 字樣網頁，如果鍵入以下指令
 ```powershell
 docker ps
 ```
