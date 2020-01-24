@@ -5,7 +5,7 @@
 
 ### 建立 Azure Container Registry (ACR)
 
-1.在命令列模式下，如下鍵入指令以確認目前環境已經安裝妥了 Azure CLI 2.0.77 之後版本，若版本太舊或沒有安裝 Azure CLI 先[下載](https://docs.microsoft.com/zh-tw/cli/azure/install-azure-cli?view=azure-cli-latest) 並安裝妥 Azure CLI。 
+1.在命令列模式下，如下鍵入指令以確認目前環境已經安裝妥了 Azure CLI 2.0.80 之後版本，若版本太舊或沒有安裝 Azure CLI 先[下載](https://docs.microsoft.com/zh-tw/cli/azure/install-azure-cli?view=azure-cli-latest) 並安裝妥 Azure CLI。 
 ```powershell
 az --version
 ```
@@ -70,7 +70,7 @@ az acr repository list -n <ACR 名稱> -o table
 az acr repository show-tags -n <ACR 名稱> --repository <Repository 名稱> -o table
 ```
 
-日後只要有權限登入使用此一 Azure Container Registry 的帳號即可以用 **<ACR 名稱>.azurecr.io/nodejs-app:1.0** 的名稱取用此映像檔，請暫時保留本 Lab 所建立之環境以供後續 Lab 使用。
+日後只要有權限存取此 Azure Container Registry 的帳號或 Azure 服務，即可以用 **<ACR 名稱>.azurecr.io/nodejs-app:1.0** 的名稱取用此映像檔，請暫時保留本 Lab 所建立之環境以供後續 Lab 使用。
 
 * [前往練習 Lab 6](Labs-06.md)
 * [返回 README](README.md)

@@ -36,7 +36,7 @@
 
 ## Lab 5 之後會使用到 Microsoft Azure，需準備妥
 *  Microsoft Azure [訂閱帳號](https://azure.microsoft.com/zh-tw/free/)
-* 下載安裝 [Azure CLI 2.0.77](https://docs.microsoft.com/zh-tw/cli/azure/install-azure-cli?view=azure-cli-latest) 之後版本 
+* 下載安裝 [Azure CLI 2.0.80](https://docs.microsoft.com/zh-tw/cli/azure/install-azure-cli?view=azure-cli-latest) 之後版本 
 
 ## Lab 1 - Lab 8 內容說明
 * [前往練習 Lab 1](Labs-01.md) : 驗證 Docker 環境正常運作

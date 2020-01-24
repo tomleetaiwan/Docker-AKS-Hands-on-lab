@@ -2,7 +2,7 @@
 
 ## Lab 6 建立 Azure Kubernetes Service 叢集
 
-1.此實作練習會使用 [Lab 5](Labs-05.md) 所建立的 myResourceGroup 與已建立的 Azure Container Registry (ACR)，請紀錄之前建立的 ACR 名稱。在命令列模式下，如下鍵入指令以確認目前環境已經安裝妥了 Azure CLI 2.0.77 之後版本，若版本太舊或沒有安裝 Azure CLI 先[下載](https://docs.microsoft.com/zh-tw/cli/azure/install-azure-cli?view=azure-cli-latest) 並安裝妥 Azure CLI。 
+1.此實作練習會使用 [Lab 5](Labs-05.md) 所建立的 myResourceGroup 與已建立的 Azure Container Registry (ACR)，請紀錄之前建立的 ACR 名稱。在命令列模式下，如下鍵入指令以確認目前環境已經安裝妥了 Azure CLI 2.0.80 之後版本，若版本太舊或沒有安裝 Azure CLI 先[下載](https://docs.microsoft.com/zh-tw/cli/azure/install-azure-cli?view=azure-cli-latest) 並安裝妥 Azure CLI。 
 
 ```powershell
 az --version
