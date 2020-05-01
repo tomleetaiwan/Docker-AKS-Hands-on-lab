@@ -38,6 +38,10 @@ spec:
 ```powershell
 kubectl apply -f mysql-pvc.yaml
 ```
+接著鍵入以下指令
+```powershell
+kubectl get pvc
+```
 
 如果 mysql-volumeclaim 順利建立完成，應會顯示類似如下結果 :
 
