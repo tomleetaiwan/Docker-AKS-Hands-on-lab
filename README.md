@@ -20,7 +20,8 @@
 
 
 ## Lab 0 準備工作，安裝 Docker Desktop for Windows
-* 備妥 Windows 10 64 位元專業版，企業版或教育版 (Build 15063 之後版本)，家用版因為不支援 Hyper-V 無法使用
+* 備妥 Windows 10 的 64 位元專業版，企業版或教育版 (Build 15063 之後版本)，家用版因為不支援 Hyper-V 無法使用，如果使用 Windows 10 家用版，則必須透過 Windows 10 版本 2004 搭配 Windows Subsystem for Linux 2 (WSL 2) 方式安裝 Docker Desktop for Windows，[以 WSL 2 安裝 Dokcer Desktop for Windows 的方式可參閱此處](https://docs.docker.com/docker-for-windows/install-windows-home/) 。搭配 WSL 2 安裝方式並不僅限於 Windows 10 家用版用戶，任何已經使用 Windows Subsystem for Linux 這都是一個比較輕量化的好選擇。
+
 * BIOS 與 Windows 需啟用 Hyper-V 虛擬化環境
 * 至 Docker Hub [註冊帳號並且下載](https://hub.docker.com/editions/community/docker-ce-desktop-windows) Docker Desktop for Windows(stable) 版本
 * 執行安裝程式，安裝完畢後 Windows 工作列會顯示 Docker 圖示點選可進行相關設定
@@ -29,6 +30,13 @@
 * 本實作練習採用 Linux 容器，啟用 Hyper-V 管理員可以看到 Docker Desktop for Windows 所建立的 Linux 虛擬機器
 
 ![Hyper-V 管理員](images/hypervmanager.png)
+
+如果您是採用 WSL 2 安裝 Dokcer Desktop for Windows 的方式則不會用到 Hyper-V 環境，當然 Hyper-V 管理員內也就看不到虛擬機器了。使用 WSL 2 安裝方式可以透過指令確認 Dokcer 環境已經順利建立
+```powershell
+wsl --list --all
+```
+![以 WSL 2 安裝確認](images/wsl1.png)
+
 
 ## 其他所需工具
 * 下載安裝 [Visual Studio Code](https://code.visualstudio.com/Download) Windows 64 bit 版本
