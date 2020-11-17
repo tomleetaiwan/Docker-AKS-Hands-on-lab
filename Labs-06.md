@@ -20,6 +20,7 @@ az aks create `
     --attach-acr <ACR 名稱>
     
 ```
+完整安裝規畫可以參閱 http://skychang.github.io/2020/10/19/Azure-Create_Azure_Kubernetes_Service/
 
 3.所有操作將使用 Kubernetes 命令列用戶端工具 **kubectl**，安裝 Docker Desktop for Windows 已經提供此一工具，但若想取得最新版本請在命列下達如下指令安裝 **kubectl**，並將 PATH 環境變數中 $HOME\.azure-kubectl 路徑搜尋順序優先於 Docker 安裝路徑
 ```powershell 
