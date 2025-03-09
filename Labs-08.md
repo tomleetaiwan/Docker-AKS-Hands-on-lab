@@ -151,7 +151,7 @@ Volume Claim
 ```powershell
 kubectl apply -f wordpress-pvc.yaml
 ```
-5.接下來以編輯器在該資料夾內建立一個 wordpress.yaml 檔案內容如下，亦可以[直接下載預先備妥之檔案使用](./Labs-08/wordpress.yaml)，此 YAML 檔案會從 [Docker Hub](https://hub.docker.com/_/wordpress) 取得 Wordpress 5.3 官方映像檔，建立 Kubernetes 的 Deployment, Pod 與 Service 物件，在 Pod 內把 Wordpress 存放 HTML 網頁路徑 /var/www/html 與之前建立的 wordpress-volumeclaim 綁定，所搭配 MySQL 連線位置需要透過環境變數 WORDPRESS_DB_HOST 設定，此環境變數我們指定了之前所建立的 MySQL Service 名稱 mysql-svc:3306 ，而 Wordpress Service 則建立 LoadBalancer 類型以提供 Public IP Address 以便外部連線存取使用。
+5.接下來以編輯器在該資料夾內建立一個 wordpress.yaml 檔案內容如下，亦可以[直接下載預先備妥之檔案使用](./Labs-08/wordpress.yaml)，此 YAML 檔案會從 [Docker Hub](https://hub.docker.com/_/wordpress) 取得 Wordpress 5.3 官方映像檔，建立 Kubernetes 的 Deployment, Pod 與 Service 物件，在 Pod 內把 Wordpress 存放 HTML 網頁路徑 /var/www/html 與之前建立的 wordpress-volumeclaim 綁定，所搭配 MySQL 連線位置需要透過環境變數 WORDPRESS_DB_HOST 設定，此環境變數我們指定了之前所建立的 MySQL Service 名稱 mysql-svc，在 Azure Kubernentes Service 一個 Service 之完整 domain name 則是 mysql-svc.default.svc.cluster.local:3306，而 Wordpress Service 則建立 LoadBalancer 類型以提供 Public IP Address 以便外部連線存取使用。
 
 ```yaml
 ---
@@ -176,7 +176,7 @@ spec:
           name: wordpress
           env:
           - name: WORDPRESS_DB_HOST
-            value: mysql-svc:3306
+            value: mysql-svc.default.svc.cluster.local:3306
           - name: WORDPRESS_DB_PASSWORD
             valueFrom:
               secretKeyRef:
