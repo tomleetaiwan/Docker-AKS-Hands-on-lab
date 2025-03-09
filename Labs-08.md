@@ -49,7 +49,7 @@ kubectl get pvc
 |-------------------|--------|------------------------------------------|----------|--------------|--------------|-------|
 | mysql-volumeclaim | Bound  | pvc-e7b8fe79-2a2c-11ea-a8da-ce7288152bd7 | 5Gi      | RWO          | default      | 4m15s |
 
-3.可以利用 Lab 3 時所建立的資料夾 Wordpress，以編輯器在該資料夾內建立一個 mysql.yaml 檔案內容如下，亦可以[直接下載預先備妥之檔案使用](./Labs-08/mysql.yaml)，此 YAML 檔案會從 [Docker Hub](https://hub.docker.com/_/mysql) 取得 MySQL 8 官方映像檔，建立 Kubernetes 的 Deployment, Pod 與 Service 物件，在 Pod 內把 MySQL 存放資料庫檔案的路徑 /var/lib/mysql 與之前建立的 mysql-volumeclaim 綁定，MySQL 系統管理員密碼需要透過環境變數設定，也從之前建立的 mysql-password Secret 內直接取出設定。此外，由於資料庫顧及安全此 Service 使用叢集內部 ClusterIP，無法在叢集之外存取 MySQL 資料庫所在的 Pod。
+3.可以利用 Lab 3 時所建立的資料夾 Wordpress，以編輯器在該資料夾內建立一個 mysql.yaml 檔案內容如下，亦可以[直接下載預先備妥之檔案使用](./Labs-08/mysql.yaml)，此 YAML 檔案會從 [Docker Hub](https://hub.docker.com/_/mysql) 取得 MySQL 8.0 官方映像檔，建立 Kubernetes 的 Deployment, Pod 與 Service 物件，在 Pod 內把 MySQL 存放資料庫檔案的路徑 /var/lib/mysql 與之前建立的 mysql-volumeclaim 綁定，MySQL 系統管理員密碼需要透過環境變數設定，也從之前建立的 mysql-password Secret 內直接取出設定。此外，由於資料庫顧及安全此 Service 使用叢集內部 ClusterIP，無法在叢集之外存取 MySQL 資料庫所在的 Pod。
 
 ```yaml
 ---
@@ -71,7 +71,7 @@ spec:
     spec:
       containers:
       - name: mysql             
-        image: mysql:8.3          
+        image: mysql:8.0.41          
         args:
         - "--default-authentication-plugin=mysql_native_password"
         - "--character-set-server=utf8mb4"
