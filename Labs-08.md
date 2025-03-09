@@ -71,7 +71,7 @@ spec:
     spec:
       containers:
       - name: mysql             
-        image: mysql:8          
+        image: mysql:8.3          
         args:
         - "--default-authentication-plugin=mysql_native_password"
         - "--character-set-server=utf8mb4"
