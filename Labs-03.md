@@ -1,7 +1,7 @@
 # Docker Desktop for Windows 與 Azure Kubernetes Service 實機操作
 
 
-## Lab 3 以 Docker Compose 使用 Name Volume 方式建立 Wordpress 5.3 與 MySQL 8 容器
+## Lab 3 以 Docker Compose 使用 Name Volume 方式建立 Wordpress 5.3 與 MySQL 8.3 容器
 
 1.建立一個資料夾名為 Wordpress
 
@@ -13,8 +13,8 @@ version: '3.1'
 services:
   
   mysql:
-    image: mysql:8
-    # MySQL 8 預設 caching_sha2_password 與 WordPress 5.3.2 不相容
+    image: mysql:8.3
+    # MySQL 8.3 預設 caching_sha2_password 與 WordPress 5.3.2 不相容
     # 因此先改用原生密碼模式，並設定支援 UTF8 編碼
     command: --default-authentication-plugin=mysql_native_password --character-set-server=utf8mb4 --collation-server=utf8mb4_unicode_ci
     # 以 Name Volume 方式定義名為 db_data 的 Volume 儲存資料庫檔案
@@ -62,7 +62,7 @@ docker ps
 | CONTAINER ID | IMAGE   | COMMAND                | CREATED       | STATUS | PORTS                              | NAMES          |
 |--------------|---------|------------------------|---------------|--------|------------------------------------|----------------|
 | 1827b1fbcdc6 | wordpress:5.3 | "docker-entrypoint.s…" | 23 seconds ago |  Up 22 seconds |  0.0.0.0:8765 -> 80/tcp | wordpress_wordpress_1 |
-| fb480cf7af28 | mysql:8 | "docker-entrypoint.s…" | 24 seconds ago |  Up 23 seconds | 3306/tcp, 33060/tcp | wordpress_mysql_1 |
+| fb480cf7af28 | mysql:8.3 | "docker-entrypoint.s…" | 24 seconds ago |  Up 23 seconds | 3306/tcp, 33060/tcp | wordpress_mysql_1 |
 
 
 5.以瀏覽器連接 http://localhost:8765 即可看見 Wordpress 首次執行安裝畫面
