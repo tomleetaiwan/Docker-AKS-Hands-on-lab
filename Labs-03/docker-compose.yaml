@@ -3,7 +3,7 @@ version: '3.1'
 services:
   
   mysql:
-    image: mysql:8
+    image: mysql:8.0.41
     # MySQL 8 預設 caching_sha2_password 與 WordPress 5.3.2 不相容，先改用原生密碼模式，並設定支援 UTF8 編碼
     command: --default-authentication-plugin=mysql_native_password --character-set-server=utf8mb4 --collation-server=utf8mb4_unicode_ci
     volumes:
