@@ -1,12 +1,12 @@
 # Docker Desktop for Windows 與 Azure Kubernetes Service 實機操作
 
 
-## Lab 2 以本機共享磁碟 Host Volume 方式建立 MySQL 8.3 容器
+## Lab 2 以本機共享磁碟 Host Volume 方式建立 MySQL 8.0 容器
 1.以瀏覽器連線到 [Docker Hub](https://hub.docker.com/_/mysql) 之官方映像檔了解目前支援之 MySQL 版本與對應標籤
 
-2.在命令列模式下執行以下命令，下載 MySQL 8.3 官方映像檔
+2.在命令列模式下執行以下命令，下載 MySQL 8.0 官方映像檔
 ```powershell
-docker pull mysql:8.3
+docker pull mysql:8.0.41
 ```
 3.如下以 PowerShell 建立兩個資料夾以便未來對應 MySQL 在 Linux 容器內的資料庫檔案與組態配置檔案之路徑
 ```powershell
@@ -14,7 +14,7 @@ mkdir $HOME/docker/mysql;
 mkdir $HOME/docker/mysql-conf
 ```
 
-4.在 PowerShell 命令列模式下執行以下命令，建立 MySQL 8.3 容器
+4.在 PowerShell 命令列模式下執行以下命令，建立 MySQL 8.0.41 容器
 ```powershell
 docker run `
 -d `
@@ -47,7 +47,7 @@ docker ps
 
 | CONTAINER ID | IMAGE     | COMMAND                | CREATED       | STATUS | PORTS                              | NAMES          |
 |--------------|-----------|------------------------|---------------|--------|------------------------------------|----------------|
-| 66f8280f7650 | mysql:8.3 | "docker-entrypoint.s…" | 2 minutes ago |  Up 6 seconds | 0.0.0.0:3306 -> 3306/tcp, 33060/tcp | reverent_haibt |
+| 66f8280f7650 | mysql:8.0.41 | "docker-entrypoint.s…" | 2 minutes ago |  Up 6 seconds | 0.0.0.0:3306 -> 3306/tcp, 33060/tcp | reverent_haibt |
 
 6.在 PowerShell 命令列模式下執行以下命令，可以看到 MySQL 容器所建立的相關資料庫檔案
 
